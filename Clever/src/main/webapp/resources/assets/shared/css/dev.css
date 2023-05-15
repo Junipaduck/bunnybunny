@@ -1,0 +1,30 @@
+[v-cloak] {
+    display: none;
+}
+
+.mobile-header-logo {
+    display: none;
+}
+
+body.main-class .mobile-header-logo {
+    display: block;
+}
+
+body.main-class .header-primary > a.btn-prev {
+    display: none;
+}
+._ckeditor-style > ol {
+    padding-left: 15px;
+}
+
+._ckeditor-style > ul {
+    padding-left: 15px;
+}
+
+._ckeditor-style > ol li {
+    list-style: decimal;
+}
+
+._ckeditor-style > ul li {
+    list-style: disc;
+}

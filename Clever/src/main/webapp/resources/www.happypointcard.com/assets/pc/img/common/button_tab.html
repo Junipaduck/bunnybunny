@@ -1,0 +1,156 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, user-scalable=no">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <link rel="icon" type="image/png"  href="https://front.happypointcard.com/upfiles/appMain/resources/ha-web/images/shared/favicon.png"/>
+    <title>SPC 해피포인트</title>
+    <link rel="stylesheet" href="/assets/pc/css/common.css?v=2023051200">
+<link rel="stylesheet" href="/assets/pc/css/vendors/uniform.custom.css" />
+<link rel="stylesheet" href="/assets/shared/js/plugins/jquery.selectric-1.11.1/selectric.css">
+<link rel="stylesheet" href="/assets/shared/js/plugins/slick-1.8.0/slick.css" />
+<link href="https://fonts.googleapis.com/css?family=Open+Sans:300,400,600,700,800&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="/assets/shared/css/dev.css" />
+<link rel="stylesheet" href="/assets/pc/js/plugins/datepicker-1.0.9/datepicker.min.css"/>
+</head>
+<body>
+<!-- #wrap -->
+<div id="wrap">
+    <!-- #container -->
+    <div id="container">
+
+        <!-- 본문 -->
+        <div class="content">
+            <!-- 진행중 이벤트 -->
+            <div class="error-page-content">
+                <!-- //페이지 네비게이션 -->
+                <div class="section-inner">
+                    <div class="result-empty-container">
+                        <div class="result-empty-content">
+                            <!-- 20.07.13 아래 내용 수정 -->
+                            <div class="promote-area">
+                                <i class="icon"><img src="https://front.happypointcard.com/upfiles/appMain/resources/ha-web/images/pc/common/layout/logo.png" alt="해피포인트 로고"></i>
+                                <i class="icon"><img src="https://front.happypointcard.com/upfiles/appMain/resources/ha-web/images/pc/common/img-error.png" alt="에러 이미지"></i>
+                                <strong class="title">잠시 후 다시 확인해 주세요!</strong>
+                                <p class="sub-text">지금 이 서비스와 연결할 수 없습니다.<br> 문제를 해결하기 위해 열심히 노력하고 있습니다.<br> 잠시 후 다시 확인해 주세요.</p>
+                                <div class="btn-group">
+                                    <a href="javascript:history.back();" class="btn medium normal">이전 페이지</a>
+                                    <a href="javascript:goMain();" class="btn medium accent">메인으로 가기</a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <!-- //진행중 이벤트 -->
+        </div>
+
+    </div>
+    <!-- // #container -->
+</div>
+<!-- // #wrap -->
+<script>
+	var $global_kakaotalk_key = "6bf8f689f98cba453ea9052ff57dad14";
+</script>
+<script src="/assets/shared/js/plugins/jquery-3.2.0/jquery-3.2.0.min.js"></script>
+<script src="/assets/shared/js/plugins/jquery.selectric-1.11.1/jquery.selectric.min.js"></script>
+<script src="/assets/shared/js/plugins/jquery.uniform-2.2.0/jquery.uniform.min.js"></script>
+<script src="/assets/shared/js/plugins/swiper/swiper.min.js"></script>
+<script src="/assets/shared/js/plugins/slick-1.8.0/slick.js"></script>
+
+<script src="/assets/pc/js/plugins/datepicker-1.0.9/datepicker.min.js"></script>
+<script src="/assets/pc/js/plugins/datepicker-1.0.9/datepicker.ko-KR.js"></script>
+<script src="/assets/pc/js/plugins/bluebird/bluebird.js"></script>
+
+<script src="/assets/pc/js/ui/common.ui.js?v=2023051200"></script>
+<script src="/assets/pc/js/ui/common.ui.dev.js?v=2023051200"></script>
+
+<script src="/assets/shared/js/unvus/unvus.js?v=2023051200"></script>
+<script src="/assets/shared/js/unvus/unvus.jq.js?v=2023051200"></script>
+<script src="/assets/shared/js/unvus/unvus.util.js?v=2023051200"></script>
+<script src="/assets/shared/js/unvus/unvus.upload.js?v=2023051200"></script>
+<script>
+    var rootContext = '';
+    var sessionUserId = null;
+    $(function () {
+        var token = $("meta[name='_csrf']").attr('content');
+        var header = $("meta[name='_csrf_header']").attr('content');
+        if(token && header) {
+            $(document).ajaxSend(function(event, xhr, options) {
+                xhr.setRequestHeader(header, token);
+            });
+        }
+        $.ajaxSetup({
+            contentType: "application/json",
+            dataType: "json"
+        });
+
+    });
+    
+    // 연속된 비밀번호 체크 (true=연속됨)
+	// 3개 연속 말고는 체크 할 수 없는 함수.
+	function checkPwRepeat($text, $length) {
+    	if ($length == undefined || $length == null || $length == "") {
+    		$length = 3;
+    	}
+    	
+    	if ($text == undefined || $text == null || $text.length < 3) {
+    		return false;
+    	}
+    	var $textA, $textB, $textC;
+    	for (var ii = 0; ii < $text.length - 2; ii++) {
+			$textA = $text.substr(ii + 0, 1);
+			$textB = $text.substr(ii + 1, 1);
+			$textC = $text.substr(ii + 2, 1);
+			if ($textA == $textB && $textB == $textC) {
+				return true;
+			}
+			// abc, 123, ABC
+			if ($textA.charCodeAt()+1 == $textB.charCodeAt() && $textB.charCodeAt()+1 == $textC.charCodeAt()) {
+				return true;
+			}
+			// cba, 321, CBA 거꾸로 연속된 경우
+			if ($textA.charCodeAt()-1 == $textB.charCodeAt() && $textB.charCodeAt()-1 == $textC.charCodeAt()) {
+				return true;
+			}
+		}
+    	
+    	return false;
+    	
+    	// 이하 주석은 동일+연속문자까지 체크함
+// 		if (!$length)
+// 			$length = 4; // 글자수를 지정하지 않으면 4로 지정
+// 		var i, j, k, x, y;
+// 		var buff = [ "0123456789", "abcdefghijklmnopqrstuvwxyz",
+// 				"ABCDEFGHIJKLMNOPQRSTUVWXYZ" ];
+// 		//~!@#$%*={}[],.
+// 		var src, src2, ptn = "";
+// 		for (i = 0; i < buff.length; i++) {
+// 			src = buff[i]; // 0123456789
+// 			src2 = buff[i] + buff[i]; // 01234567890123456789
+// 			for (j = 0; j < src.length; j++) {
+// 				x = src.substr(j, 1); // 0
+// 				y = src2.substr(j, $length); // 0123
+// 				ptn += "[" + x + "]{" + $length + ",}|"; // [0]{4,}|0123|[1]{4,}|1234|...
+// 				ptn += y + "|";
+// 			}
+// 		}
+// 		console.log(ptn);
+// 		console.log(ptn.replace(/.$/, ""));
+// 		ptn = new RegExp(ptn.replace(/.$/, "")); // 맨마지막의 글자를 하나 없애고 정규식으로 만든다.
+// 		if (ptn.test($length))
+// 			return true;
+// 		return false;
+	}
+</script>
+<div class="debug" style="display: none">
+    <h3>페이지를 찾을 수 없습니다.</h3>
+    </div>
+<script type="text/javascript">
+    function goMain() {
+        document.location.href='/';
+    }
+    </script>
+</body>
+</html>

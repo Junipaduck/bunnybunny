@@ -67,7 +67,7 @@
                         </li>
                         <li class="two-per-row">
                             <img src="${pageContext.request.contextPath }/resources/images/대출이미지.png" alt="대출조회" class="brand-thumb">
-                            <a href="매핑주소" class="brand-title brand-link" title="대출조회">대출조회</a>
+                            <a href="loan.oa" class="brand-title brand-link" title="대출조회">대출조회</a>
                             <p class="brand-sub">대출내역을 조회하세요~</p>
                             <div class="brand-benefit-mem">
                             </div>

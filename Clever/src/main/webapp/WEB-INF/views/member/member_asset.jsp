@@ -44,7 +44,7 @@
                         <li class="two-per-row">
                             <img src="${pageContext.request.contextPath }/resources/images/통장이미지.png" alt="계좌조회" class="brand-thumb">
                             <!-- 링크 이동인 경우 a태그로 변경, .brand-link 클래스 추가 -->
-                            <a href="매핑주소" class="brand-title brand-link" title="계좌조회">계좌조회</a>
+                            <a href="accountInquiry.ac" class="brand-title brand-link" title="계좌조회">계좌조회</a>
                             <p class="brand-sub">연동된 모든 계좌를 조회하세요~</p>
                             <div class="brand-benefit-mem">
                             </div>

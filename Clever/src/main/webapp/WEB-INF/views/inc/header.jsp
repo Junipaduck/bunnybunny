@@ -223,6 +223,7 @@
 	                                <li><a href="https://www.happypointcard.com/page/customer/faq.spc">FAQ</a></li>
 	                                <li><a href="noticeList.no">공지사항</a></li>
 	                                <li><a href="https://www.happypointcard.com/page/customer/term.spc">이용약관</a></li>
+	                                <li><a href="AdminMain.ad">관리자페이지(임시)</a></li>
 	                            </ul>
 	                        </div>
 	                    </div>

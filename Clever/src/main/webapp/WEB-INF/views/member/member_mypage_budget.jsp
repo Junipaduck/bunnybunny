@@ -39,10 +39,16 @@
     <form class="w3-container" style="margin: auto;width: 200px;">
 
 		<label>한 달 예산</label>
-		<input class="w3-input" type="text">
+		<input class="w3-input" type="text" id="month_budget" name="month_budget">
 		
 		<label>목표 지출액</label>
-		<input class="w3-input" type="text">
+		<input class="w3-input" type="text" id="month_aim" name="month_aim">
+	    <br>
+		<label>고정 지출액</label>
+		<input class="w3-input" type="text" id="month_spend" name="month_spend">
+	    <br>
+		<label>여유자금</label>
+		<input class="w3-input" type="text" id="month_spare_money" name="month_spare_money">
 	    <br>
 		<button class="w3-button w3-white w3-border w3-border-Khaki w3-round-large">예산설정 GO</button>
 	</form>

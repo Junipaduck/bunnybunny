@@ -14,6 +14,14 @@
 		<jsp:include page="../inc/header.jsp"></jsp:include>
 	</header>
 
+	<!-- 페이지 네비게이션 -->
+	<div class="page-navigation">
+	        <div class="inner">
+	            <span class="path"><a href="./" title="홈">Home</a></span>
+	            <span class="path"><a href="" title="My 자산조회">나의 회원 정보</a></span>
+	            <span class="path"><a href="" title="My 자산조회">회원정보수정</a></span>
+	        </div>
+	</div>
 
 	<!-- 중간 작업공간 시작 ============================================================== -->
 

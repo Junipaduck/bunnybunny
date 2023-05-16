@@ -14,10 +14,17 @@
 		<jsp:include page="../inc/header.jsp"></jsp:include>
 	</header>
 
+	<!-- 페이지 네비게이션 -->
+	<div class="page-navigation">
+	        <div class="inner">
+	            <span class="path"><a href="./" title="홈">Home</a></span>
+	            <span class="path"><a href="" title="My 자산조회">회원가입</a></span>
+	        </div>
+	</div>
 
 	<!-- 중간 작업공간 시작 ============================================================== -->
 
-		    <!-- //페이지 네비게이션 -->
+	<!-- //페이지 네비게이션 -->
     <div class="section-inner">
         <h1 class="page-title" style="text-align: center;">회원가입</h1>
         &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;

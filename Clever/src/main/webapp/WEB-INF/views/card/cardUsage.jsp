@@ -12,6 +12,15 @@
 	<jsp:include page="../inc/header.jsp"></jsp:include>
 </header>
 
+<!-- 페이지 네비게이션 -->
+<div class="page-navigation">
+        <div class="inner">
+            <span class="path"><a href="./" title="홈">Home</a></span>
+            <span class="path"><a href="" title="My 자산조회">My 자산조회</a></span>
+            <span class="path"><a href="" title="My 자산조회">My 카드조회</a></span>
+        </div>
+</div>
+
 <!-- 카드 사용 내역 시작 -->
 <div class="content">
 	<div class="section-inner">

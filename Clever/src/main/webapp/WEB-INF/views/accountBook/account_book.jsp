@@ -36,12 +36,103 @@ integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw
     background-color: #28a745;
     border-color: #28a745;
 }
+.btn-success.focus, .btn-success:focus {
+    color: #000;
+    background-color: white;
+    border-color: blue;
+    box-shadow: 0 0 0 0rem rgba(0,0,0,0);
+}
+.container-chart {
+    display: grid;
+    grid-template-columns: 500px 500px;
+    margin-left: 500px;
+    align-items: center;
+}
 </style>
+<!-- 원형 차트 -->
+<script type="text/javascript" src="https://www.gstatic.com/charts/loader.js"></script>
+<script type="text/javascript">
+  google.charts.load('current', {'packages':['corechart']});
+  google.charts.setOnLoadCallback(drawChart);
+
+  function drawChart() {
+
+    var data = google.visualization.arrayToDataTable([
+      ['Task', 'Hours per Day'],
+      ['식비',     1],
+      ['쇼핑',      1],
+      ['생활비',  1],
+      ['통신비', 1],
+      ['기타',    1]
+    ]);
+
+    var options = {
+      title: '000님의 0월 가계부차트'
+    };
+
+    var chart = new google.visualization.PieChart(document.getElementById('piechart'));
+
+    chart.draw(data, options);
+  }
+</script>
+
 </head>
 <body>
 <header>
 		<jsp:include page="../inc/header.jsp"></jsp:include>
 </header>
+<div class="container-chart">
+<div id="piechart" style="width: 500px; height: 250px;"></div>
+<div style="display: block; box-sizing: border-box; height: 200px; width: 300px;">
+<div class="h5 text-center" style="font-size: 15px;">월별 추세 <img width="25px" style="margin-bottom: 10px;" src="https://www.svgrepo.com/show/491984/notice-certificate-of-deposit.svg"></div>
+<canvas id="mtChart" ></canvas>
+</div>
+</div>
+<script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+<!-- 막대 그래프 -->
+<script>
+ /* 데이터 정보를 담은 변수 선언 */
+const labels = ['4월','5월','6월'];
+const data = {
+  labels: labels,
+  datasets: [{
+	  label: '가계부 차트',
+    backgroundColor: [
+        '#ff4658',
+        '#ffa55a',
+        '#fbde88',
+        ],
+    borderColor: [
+    	'#ff4658',
+        '#ffa55a',
+        '#fbde88',
+    ],
+    data: ['1', '2', '3'],
+  }
+//   ,
+//   {
+//     label: 'kkk',
+//     backgroundColor: 'rgb(255, 99, 132)',
+//     borderColor: 'rgb(255, 99, 132)',
+//     data: [30, 10, 5, 2, 20, 30, 45],
+//   }
+  ]
+};
+
+const config = {
+  type: 'bar',
+  data,
+  options: {}
+};
+
+
+</script>
+<script>
+const mtChart = new Chart(
+    document.getElementById('mtChart'),
+    config
+  );
+</script>
 <div class="container-xl">
 	<div class="table-responsive">
 		<div class="table-wrapper" style="padding-left: 40;padding-left: 40px;padding-left: 40px;">
@@ -90,11 +181,11 @@ integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw
 				<div class="modal-body">					
 					<div class="form-group">
 						<label>분류</label>
-							<span>
-								<input type="radio" name="n" value="지출">지출
-								<input type="radio" name="n" value="수입">수입
-								<input type="radio" name="n" value="이체">이체
-							</span>					
+						<div align="center">
+							<input type="radio" name="n" value="지출">지출
+							<input type="radio" name="n" value="수입">수입
+							<input type="radio" name="n" value="이체">이체
+						</div>
 					</div>
 					<div class="form-group">
 						<label>카테고리</label>

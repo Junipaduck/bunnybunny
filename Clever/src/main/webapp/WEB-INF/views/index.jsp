@@ -94,9 +94,9 @@
     <div class="main-keyvisual-slider">
         <div class="swiper-container">
             <div class="swiper-wrapper">
-                <div class="swiper-slide banner-hit" style="background-image: url(${pageContext.request.contextPath }/resources/front.happypointcard.com/upfiles/appMain/banner/normal/2020110509470336271811046109.png)" onclick="location.href='https://www.happypointcard.com/page/presentation/point.spc'" data-bannerid="10001"></div>
-<%--                 <div class="swiper-slide banner-hit" style="background-image: url(${pageContext.request.contextPath }/resources/front.happypointcard.com/upfiles/appMain/banner/normal/2020110502481711145321665417.png)" onclick="location.href='https://www.happypointcard.com/page/presentation/app.spc'" data-bannerid="10000"></div> --%>
  					 <div class="swiper-slide banner-hit" style="background-image: url(${pageContext.request.contextPath }/resources/images/main1.png" data-bannerid="10001"></div>
+               		 <div class="swiper-slide banner-hit" style="background-image: url(${pageContext.request.contextPath }/resources/front.happypointcard.com/upfiles/appMain/banner/normal/2020110509470336271811046109.png)" onclick="location.href='https://www.happypointcard.com/page/presentation/point.spc'" data-bannerid="10001"></div>
+<%--                 <div class="swiper-slide banner-hit" style="background-image: url(${pageContext.request.contextPath }/resources/front.happypointcard.com/upfiles/appMain/banner/normal/2020110502481711145321665417.png)" onclick="location.href='https://www.happypointcard.com/page/presentation/app.spc'" data-bannerid="10000"></div> --%>
 <%--  					 <div class="swiper-slide banner-hit" style="background-image: url(${pageContext.request.contextPath }/resources/images/main2.png" data-bannerid="10001"></div> --%>
                 </div>
             <div class="slider-controller-area">

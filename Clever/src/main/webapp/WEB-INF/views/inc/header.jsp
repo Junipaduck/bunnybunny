@@ -80,7 +80,7 @@
 	            </ul>
 	        </div>
 	        <div class="header-primary">
-	            <h1 class="header-logo"><a href="./" tabindex="-1">2팀♥</h1>
+	            <h1 class="header-logo"><a href="./" tabindex="-1"><img src="${pageContext.request.contextPath }/resources/images/CleverLogo2.png" width="120px" height="40px"></h1>
 	            <nav>
 	                <ul class="gnb">
 	                    <li class="gnb-menu">

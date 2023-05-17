@@ -64,19 +64,16 @@
 	            <ul class="header-aside-menu">
 	                <li><a href="login.me">로그인</a></li>
 	                    <li><a href="joinForm.me">회원가입</a></li>
-	<!--                 <li><a href="https://www.happypointcard.com/page/presentation/membership.spc">멤버십라운지</a></li> -->
-	<!--                 <li><a href="https://www.happypointcard.com/page/store/search.spc">매장찾기</a></li> -->
+	                <li><a href="myPage.me">마이페이지</a></li> <!-- 로그인 하면 로그인&회원가입 없애고, 마이페이지가 나오도록 하기 -->
 	                <li class="csmenu">
 	                    <a href="매핑주소를입력하시오">고객센터</a>
 	                    <ul class="menu-open">
-	                        <li><a href="매핑주소를입력하시오">챗봇상담</a></li>
-	<!--                         <li><a href="https://www.happypointcard.com/page/customer/faq.spc">FAQ</a></li> -->
 	                        <li><a href="noticeList.no">공지사항</a></li>
-	                        <li><a href="매핑주소를입력하시오">팁게시판</a></li>
-	<!--                         <li><a href="https://www.happypointcard.com/page/customer/term.spc">이용약관</a></li> -->
+	                        <li><a href="chatbot.co">1:1챗봇상담</a></li>
+	                        <li><a href="매핑주소를입력하시오">FAQ</a></li>
 	                    </ul>
 	                </li>
-	                <li class="card"><a href="매핑주소를입력하시오"><i class="icon-card"></i>카드등록</a></li>
+	                <li class="card" style="background-color: #abe8ff;"><a href="매핑주소를입력하시오" style="font-size: medium;"><img src="${pageContext.request.contextPath }/resources/images/sell_icon.png" width="20px;" height="20px;"> 내상품팔기</a></li>
 	            </ul>
 	        </div>
 	        <div class="header-primary">
@@ -87,26 +84,29 @@
 	                        <a href="매핑주소를입력하시오" onclick="headerPage.showSubGnb(this);">소개</a>
 	                    </li>
 	                    <li class="gnb-menu">
-	                        <a href="매핑주소를입력하시오" onclick="headerPage.showSubGnb(this);">상품소개</a>
+	                        <a href="event.eo" onclick="headerPage.showSubGnb(this);">이벤트/쿠폰</a>
 	                    </li>
 	                    <li class="gnb-menu">
-	                        <a href="매핑주소를입력하시오" onclick="headerPage.showSubGnb(this);">이벤트/쿠폰</a>
+	                        <a href="store.so" onclick="headerPage.showSubGnb(this);">스토어</a>
 	                    </li>
 	                    <li class="gnb-menu">
-	                        <a href="매핑주소를입력하시오" onclick="headerPage.showSubGnb(this);">커뮤니티</a>
+	                        <a href="community.co" onclick="headerPage.showSubGnb(this);">커뮤니티</a>
 	                    </li>
-	                    <li class="gnb-menu">
-	                        <a href="javascript:void(0);" onclick="headerPage.showSubGnb(this);">마이페이지</a>
-	                        <div class="sub-menu-wrap">
-	                            <ul class="sub-gnb">
-	                                <li class="sub-menu"><a href="accountBook.ac">My 가계부</a></li>
-	                                <li class="sub-menu"><a href="memberAsset.me">My 자산조회</a></li>
-	                                <li class="sub-menu"><a href="memberConsumption.me">My 소비분석</a></li>
-	                                <li class="sub-menu"><a href="memberBudget.me">My 예산설정</a></li>
-	                                <li class="sub-menu"><a href="memberInformation.me">나의 회원 정보</a></li>
-	                            </ul>
-	                        </div>
+	                     <li class="gnb-menu">
+	                        <a href="auction.ao" onclick="headerPage.showSubGnb(this);">경매하기</a>
 	                    </li>
+<!-- 	                    <li class="gnb-menu"> -->
+<!-- 	                        <a href="javascript:void(0);" onclick="headerPage.showSubGnb(this);">마이페이지</a> -->
+<!-- 	                        <div class="sub-menu-wrap"> -->
+<!-- 	                            <ul class="sub-gnb"> -->
+<!-- 	                                <li class="sub-menu"><a href="accountBook.ac">My 가계부</a></li> -->
+<!-- 	                                <li class="sub-menu"><a href="memberAsset.me">My 자산조회</a></li> -->
+<!-- 	                                <li class="sub-menu"><a href="memberConsumption.me">My 소비분석</a></li> -->
+<!-- 	                                <li class="sub-menu"><a href="memberBudget.me">My 예산설정</a></li> -->
+<!-- 	                                <li class="sub-menu"><a href="memberInformation.me">나의 회원 정보</a></li> -->
+<!-- 	                            </ul> -->
+<!-- 	                        </div> -->
+<!-- 	                    </li> -->
 	                </ul>
 	            </nav>
 	            <button type="button" class="btn-allmenu">전체메뉴</button>

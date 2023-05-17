@@ -25,17 +25,6 @@ public class memberController {
 		return "accountBook/account_book";
 	} 
 	
-	//공지사항 리스트 폼 포워딩
-	@RequestMapping(value = "noticeList.no", method = {RequestMethod.GET, RequestMethod.POST})
-	public String noticeList() {
-		return "notice/notice_list";
-	} 
-	
-	//공지사항 상세페이지 폼 포워딩
-	@RequestMapping(value = "noticeView.no", method = {RequestMethod.GET, RequestMethod.POST})
-	public String noticeView() {
-		return "notice/notice_view";
-	} 
 	
 	// 마이페이지 - 나의 회원정보 포워딩 
 	@RequestMapping(value = "memberInformation.me", method = {RequestMethod.GET, RequestMethod.POST})

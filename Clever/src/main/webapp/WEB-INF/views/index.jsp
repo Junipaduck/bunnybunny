@@ -15,6 +15,7 @@
 
     <title>자산관리 2팀 - 메인</title>
 
+
 <link rel="stylesheet" href="${pageContext.request.contextPath }/resources/www.happypointcard.com/assets/pc/css/common9846.css?v=2023051200">
 <link rel="stylesheet" href="${pageContext.request.contextPath }/resources/www.happypointcard.com/assets/pc/css/vendors/uniform.custom.css" />
 <link rel="stylesheet" href="${pageContext.request.contextPath }/resources/www.happypointcard.com/assets/shared/js/plugins/jquery.selectric-1.11.1/selectric.css">
@@ -22,6 +23,9 @@
 <link href="https://fonts.googleapis.com/css?family=Open+Sans:300,400,600,700,800&amp;display=swap" rel="stylesheet">
 <link rel="stylesheet" href="${pageContext.request.contextPath }/resources/www.happypointcard.com/assets/shared/css/dev.css" />
 <link rel="stylesheet" href="${pageContext.request.contextPath }/resources/www.happypointcard.com/assets/pc/js/plugins/datepicker-1.0.9/datepicker.min.css"/>
+ <!-- 부트스트랩 css 링크 -->
+<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css"
+integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous"> 
 
     
 
@@ -94,8 +98,8 @@
     <div class="main-keyvisual-slider">
         <div class="swiper-container">
             <div class="swiper-wrapper">
- 					 <div class="swiper-slide banner-hit" style="background-image: url(${pageContext.request.contextPath }/resources/images/main1.png" data-bannerid="10001"></div>
-               		 <div class="swiper-slide banner-hit" style="background-image: url(${pageContext.request.contextPath }/resources/front.happypointcard.com/upfiles/appMain/banner/normal/2020110509470336271811046109.png)" onclick="location.href='https://www.happypointcard.com/page/presentation/point.spc'" data-bannerid="10001"></div>
+ 					 <div class="swiper-slide banner-hit" style="background-image: url(${pageContext.request.contextPath }/resources/images/main11.png" data-bannerid="10001"></div>
+<%--                		 <div class="swiper-slide banner-hit" style="background-image: url(${pageContext.request.contextPath }/resources/front.happypointcard.com/upfiles/appMain/banner/normal/2020110509470336271811046109.png)" onclick="location.href='https://www.happypointcard.com/page/presentation/point.spc'" data-bannerid="10001"></div> --%>
 <%--                 <div class="swiper-slide banner-hit" style="background-image: url(${pageContext.request.contextPath }/resources/front.happypointcard.com/upfiles/appMain/banner/normal/2020110502481711145321665417.png)" onclick="location.href='https://www.happypointcard.com/page/presentation/app.spc'" data-bannerid="10000"></div> --%>
 <%--  					 <div class="swiper-slide banner-hit" style="background-image: url(${pageContext.request.contextPath }/resources/images/main2.png" data-bannerid="10001"></div> --%>
                 </div>
@@ -112,24 +116,18 @@
 </section>
 <!-- //키비주얼 -->
 
-<!-- sns 영역 -->
-<section class="main-section main-sns-section">
-    <div class="section-inner">
-        <div class="main-section-title">
-            <h2 class="title">해피포인트 SNS</h2>
-            <p class="sub-text">더 많은 소식을 SNS로 만나보세요.</p>
-        </div>
-<ul class="sns-list" id="socialList">
-            </ul>
-    </div>
-</section>
-<!-- //sns 영역 -->
+<!-- 중고상품리스트 -->
+
+<!-- 중고상품리스트 -->
+
+<!-- 상품리스트 인클루드 -->
+<jsp:include page="sale_product_list.jsp"></jsp:include>
 
 <!-- 제휴 영역-->
 <section class="main-section main-partner-section">
     <div class="section-inner">
         <div class="main-section-title white">
-            <h2 class="title">제휴안내</h2>
+            <h2 class="title">여긴 뉴스 ?</h2>
             <p class="sub-text">해피포인트 카드의 혜택을 똑같이 누리세요.</p>
             <a href="https://www.happypointcard.com/page/alliance/corporation.spc" class="btn-more" title="더보기">더보기</a>
         </div>
@@ -207,107 +205,10 @@
 </section>
 <!-- //제휴 영역-->
 
-<!-- 공지사항-->
-<!-- TODO 공지사항 링크 필요-->
-<section class="main-section main-notice-section">
-    <div class="section-inner">
-        <div class="main-section-title">
-            <h2 class="title">공지사항</h2>
-            <p class="sub-text">해피포인트 새로운 소식을 알려드립니다.</p>
-            <a href="https://www.happypointcard.com/page/customer/notice-list.spc" class="btn-more" title="더보기">더보기</a>
-        </div>
-        <div class="notice-board">
-            <div class="item">
-                    <a href="https://www.happypointcard.com/page/customer/notice-view.spc?seq=2715">
-                        <div class="board-content">
-                            <div class="cell">
-                                <!-- 새글 일경우 추가 -->
-                                    <i class="icon new"></i>
-                                <p class="article">해피포인트 개인정보처리방침 변경 공지</p>
-                            </div>
-                        </div>
-                        <div class="date">
-                            <div class="year-month">2023-05</div>
-                            <strong class="day">09</strong>
-                        </div>
-                    </a>
-                </div>
-            <div class="item">
-                    <a href="https://www.happypointcard.com/page/customer/notice-view.spc?seq=2695">
-                        <div class="board-content">
-                            <div class="cell">
-                                <p class="article">SKT 휴대폰 본인확인 서비스 일시중단 안내 (5/4)</p>
-                            </div>
-                        </div>
-                        <div class="date">
-                            <div class="year-month">2023-05</div>
-                            <strong class="day">02</strong>
-                        </div>
-                    </a>
-                </div>
-            <div class="item">
-                    <a href="https://www.happypointcard.com/page/customer/notice-view.spc?seq=2675">
-                        <div class="board-content">
-                            <div class="cell">
-                                <p class="article">시스템 정기점검에 따른 서비스 일시 중단 안내(4/27)</p>
-                            </div>
-                        </div>
-                        <div class="date">
-                            <div class="year-month">2023-04</div>
-                            <strong class="day">24</strong>
-                        </div>
-                    </a>
-                </div>
-            </div>
-    </div>
-</section>
-<!-- //공지사항-->
 
 
 
-<!-- 시스템점검중 팝업 #popupServiceCheck -->
-<div class="layer-popup basic-popup service-check-popup" id="emergencyNoticePopup">
-    <form>
-        <div class="popup-wrapper">
-            <div class="popup-inner">
-                <div class="popup-body">
-                    <div class="popup-content">
-                        <div class="article-block">
-                            <img id="emergency-img" src="#" alt="">
-                        </div>
-                        <div class="bottom-btn-group half">
-                            <button type="button" class="btn medium normal _nomore-today">오늘은 그만 보기</button>
-                            <button type="button" class="btn medium accent btn-close">닫기</button>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </form>
-</div>
 
-<!-- SDAPP-7623 에스피씨 네트웍스 사명 변경에 대한 공지 요청 -->
-<div class="layer-popup basic-popup service-check-popup" id="temporaryNoticePopup">
-    <form>
-        <div class="popup-wrapper">
-            <div class="popup-inner">
-                <div class="popup-body">
-                    <div class="popup-content">
-                        <div class="article-block" style="position: relative;">
-                        <button type="button" class="btn-close upper-right" style="position: absolute;right: 13px;width: 21px;height: 19px;top: 14px;opacity: 0;cursor: pointer;"></button>
-                            <img id="temporary-img" src="${pageContext.request.contextPath }/resources/front.happypointcard.com/upfiles/appMain/resources/ha-web/images/pc/main/20210115_temporaryNotice_img.jpg" alt="">
-                        </div>
-                        <div class="bottom-btn-group half">
-                            <button type="button" class="btn medium normal _nomore-today">오늘은 그만 보기</button>
-                            <button type="button" class="btn medium accent btn-close">닫기</button>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </form>
-</div>
-</div>
 
 
 	<footer>

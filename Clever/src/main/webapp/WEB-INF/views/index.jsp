@@ -90,7 +90,7 @@ integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw
 
 
 <!-- #content -->
-            <div id="content" class="content">
+            <div id="content" class="content"></div>
                 
 
 <!-- 키비주얼 -->
@@ -99,9 +99,8 @@ integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw
         <div class="swiper-container">
             <div class="swiper-wrapper">
  					 <div class="swiper-slide banner-hit" style="background-image: url(${pageContext.request.contextPath }/resources/images/main11.png" data-bannerid="10001"></div>
-<%--                		 <div class="swiper-slide banner-hit" style="background-image: url(${pageContext.request.contextPath }/resources/front.happypointcard.com/upfiles/appMain/banner/normal/2020110509470336271811046109.png)" onclick="location.href='https://www.happypointcard.com/page/presentation/point.spc'" data-bannerid="10001"></div> --%>
-<%--                 <div class="swiper-slide banner-hit" style="background-image: url(${pageContext.request.contextPath }/resources/front.happypointcard.com/upfiles/appMain/banner/normal/2020110502481711145321665417.png)" onclick="location.href='https://www.happypointcard.com/page/presentation/app.spc'" data-bannerid="10000"></div> --%>
-<%--  					 <div class="swiper-slide banner-hit" style="background-image: url(${pageContext.request.contextPath }/resources/images/main2.png" data-bannerid="10001"></div> --%>
+ 					 <!-- 더치트링크로 이동하는 메인배너 -->
+ 					 <div class="swiper-slide banner-hit" style="background-image: url(${pageContext.request.contextPath }/resources/images/main22.png" onclick="location.href='https://thecheat.co.kr/rb/?mod=_search'" data-bannerid="10001"></div>
                 </div>
             <div class="slider-controller-area">
                 <div class="paging">
@@ -115,19 +114,17 @@ integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw
     </div>
 </section>
 <!-- //키비주얼 -->
-
+				
 <!-- 중고상품리스트 -->
-
-<!-- 중고상품리스트 -->
-
-<!-- 상품리스트 인클루드 -->
 <jsp:include page="sale_product_list.jsp"></jsp:include>
+<!-- //중고상품리스트 -->
+
 
 <!-- 제휴 영역-->
 <section class="main-section main-partner-section">
     <div class="section-inner">
         <div class="main-section-title white">
-            <h2 class="title">여긴 뉴스 ?</h2>
+            <h2 class="title">여긴 뭐하지</h2>
             <p class="sub-text">해피포인트 카드의 혜택을 똑같이 누리세요.</p>
             <a href="https://www.happypointcard.com/page/alliance/corporation.spc" class="btn-more" title="더보기">더보기</a>
         </div>

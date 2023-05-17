@@ -14,19 +14,17 @@
 		<jsp:include page="../inc/header.jsp"></jsp:include>
 	</header>
 
-	<!-- 페이지 네비게이션 -->
-	<div class="page-navigation">
-	        <div class="inner">
-	            <span class="path"><a href="./" title="홈">Home</a></span>
-	            <span class="path"><a href="" title="My 자산조회">회원가입</a></span>
-	        </div>
-	</div>
 
 	<!-- 중간 작업공간 시작 ============================================================== -->
 
 	<!-- //페이지 네비게이션 -->
     <div class="section-inner">
-        <h1 class="page-title" style="text-align: center;">회원가입</h1>
+ 
+		 <div class="subpage-title-area">
+	            <h2 class="title">회원가입</h2>
+	            <p class="sub-text"></p>
+	      </div>
+	      
         &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
         <div class="small-layout-inner">
 <!--             <p class="page-subTitle">안녕하세요, 아이티윌2팀 입니다</p> -->
@@ -73,7 +71,7 @@
                             <div class="input-cover" style="overflow: visible;">
                                 <!-- 입력값 삭제 버튼 없을경우 no-delete추가 -->
                                 <h5><label>생년월일</label></h5>
-                                <input type="text" placeholder="ex)19000101" title="비밀번호 입력" id="birth" name="birth">
+                                <input type="text" placeholder="ex)920816-2" title="비밀번호 입력" id="birth" name="birth">
                             </div>
                         </div>
                     </div>
@@ -81,7 +79,7 @@
                         <div class="insert">
                             <div class="input-cover" style="overflow: visible;">
                                 <!-- 입력값 삭제 버튼 없을경우 no-delete추가 -->
-                                <h5><label>전화번호</label></h5>
+                                <h5><label>연락처</label></h5>
                                 <input type="text" placeholder="- 기호 생략" title="비밀번호 입력" id="phone" name="phone">
                             </div>
                         </div>
@@ -100,7 +98,26 @@
                             <div class="input-cover" style="overflow: visible;">
                                 <!-- 입력값 삭제 버튼 없을경우 no-delete추가 -->
                                 <h5><label>주소</label></h5>
-                                <input type="text" placeholder="주소를 입력하세요" title="비밀번호 입력" id="address" name="address">
+                                <input type="text" placeholder="도로명주소를 검색하세요" title="" id="address1" name="address1">
+                                <input type="text" placeholder="상세주소를 입력하세요" title="" id="address2" name="address2">
+                           			    
+                           			    <!-- 주소 API 스크립트 -->
+						                <script src="//t1.daumcdn.net/mapjsapi/bundle/postcode/prod/postcode.v2.js"></script>
+										<script>
+										window.onload = function(){
+										    document.getElementById("address1").addEventListener("click", function(){ //주소입력칸을 클릭하면
+										        //카카오 지도 발생
+										        new daum.Postcode({
+										            oncomplete: function(data) { //선택시 입력값 세팅
+										                document.getElementById("address1").value = data.address; // 주소 넣기
+										                document.querySelector("input[name=address2]").focus(); //상세입력 포커싱
+										            }
+										        }).open();
+										    });
+										}
+										</script>
+                           
+                           
                             </div>
                         </div>
                     </div>
@@ -108,30 +125,20 @@
                         <div class="insert">
                             <div class="input-cover" style="overflow: visible;">
                                 <!-- 입력값 삭제 버튼 없을경우 no-delete추가 -->
-                                <h5><label>관심분야</label></h5>
+                                <h5><label>관심카테고리</label></h5>
                                 &nbsp;
                                 <select name="interest">
-                                	<option>관심분야 선택</option>
-                                	<option value="saving">저축</option>
-                                	<option value="stock">주식</option>
-                                	<option value="card">카드</option>
+                                	<option>관심카테고리 선택</option>
+                                	<option value="saving">패션의류</option>
+                                	<option value="stock">뷰티잡화</option>
+                                	<option value="card">가구생활</option>
+                                	<option value="card">추후수정할예정</option>
                                 </select>
                             </div>
                         </div>
                     </div>
-                    <div class="field">
-                        <div class="insert">
-                            <div class="input-cover" style="overflow: visible;">
-                                <!-- 입력값 삭제 버튼 없을경우 no-delete추가 -->
-                                <h5><label>성별</label></h5>
-                                &nbsp;
-								 <input type="radio" id="member_male" value="남" name="member_gender"><label for="member_male">남</label>
-								 <input type="radio" id="member_female" value="여" name="member_gender"><label for="member_female">여</label>
-                            </div>
-                        </div>
-                    </div>
                     <div class="btn-group wide">
-                        <button type="submit" class="btn medium accent">회원가입</button>
+                        <button type="submit" class="btn medium accent" style="margin-bottom: 100px;">회원가입</button>
                     </div>
                 </fieldset>
             </form>

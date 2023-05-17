@@ -10,7 +10,7 @@ public class memberController {
 	//로그인 폼 포워딩
 	@RequestMapping(value = "login.me", method = {RequestMethod.GET, RequestMethod.POST})
 	public String login() {
-		return "member/login";
+		return "member/member_login_form";
 	} 
 	
 	//회원가입 폼 포워딩

@@ -23,6 +23,10 @@
                         </div>
 				           <a href="./page-login.html" class="dropdown-item">
                                       <i class="icon-key"></i>
+                                      <span class="ml-2">로그인</span>
+                           </a> | 
+				           <a href="./page-login.html" class="dropdown-item">
+                                      <i class="icon-key"></i>
                                       <span class="ml-2">로그아웃</span>
                            </a>
                         <ul class="navbar-nav header-right">

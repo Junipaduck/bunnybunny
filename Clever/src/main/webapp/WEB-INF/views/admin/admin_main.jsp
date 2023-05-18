@@ -38,193 +38,24 @@
     ***********************************-->
     <div id="main-wrapper">
 
-        <!--**********************************
-            Nav header start
-        ***********************************-->
-        <div class="nav-header">
-            <a href="./" class="brand-logo">
-                <img class="brand-title" src="${pageContext.request.contextPath }/resources/images/관리자로고.png" alt="">
-            </a>
+		<!-- 네비게이션 헤더 시작 -->
+		<header>
+			<jsp:include page="../inc/admin_nav_header.jsp"></jsp:include>
+		</header>
+		<!-- 네비게이션 헤더 끝 -->
 
-            <div class="nav-control">
-                <div class="hamburger">
-                    <span class="line"></span><span class="line"></span><span class="line"></span>
-                </div>
-            </div>
-        </div>
-        <!--**********************************
-            Nav header end
-        ***********************************-->
+		<!-- 상단 헤더 시작 -->
+        <header>
+			<jsp:include page="../inc/admin_header.jsp"></jsp:include>
+        </header>
+		<!-- 상단 헤더 끝 -->
 
-        <!--**********************************
-            Header start
-        ***********************************-->
-        <div class="header">
-            <div class="header-content">
-                <nav class="navbar navbar-expand">
-                    <div class="collapse navbar-collapse justify-content-between">
-                        <div class="header-left">
-						<!-- 검색 창 있던 자리 -->
-	                        <a href="AdminMain.ad" class="dropdown-item">
-	                            <i class="icon-user"></i>
-	                            <span class="ml-2">홈</span>
-	                        </a>
-                        </div>
-				           <a href="./page-login.html" class="dropdown-item">
-                                      <i class="icon-key"></i>
-                                      <span class="ml-2">로그아웃</span>
-                           </a>
-                        <ul class="navbar-nav header-right">
-                            <li class="nav-item dropdown notification_dropdown">
-                                <a class="nav-link" href="#" role="button" data-toggle="dropdown">
-                                    <i class="mdi mdi-bell"></i>
-                                    <div class="pulse-css"></div>
-                                </a>
-                                <div class="dropdown-menu dropdown-menu-right">
-                                    <ul class="list-unstyled">
-                                 	<!-- 알람 내용 있던 자리 -->
-                                    </ul>
-                                    <a class="all-notification" href="#">알람 목록<i
-                                            class="ti-arrow-right"></i></a>
-                                </div>
-                            </li>
-                            <li class="nav-item dropdown header-profile">
-                                <a class="nav-link" href="#" role="button" data-toggle="dropdown">
-                                    <i class="mdi mdi-account"></i>
-                                </a>
-                                <div class="dropdown-menu dropdown-menu-right">
-                                    <a href="./app-profile.html" class="dropdown-item">
-                                        <i class="icon-user"></i>
-                                        <span class="ml-2">Profile </span>
-                                    </a>
-                                    <a href="./email-inbox.html" class="dropdown-item">
-                                        <i class="icon-envelope-open"></i>
-                                        <span class="ml-2">Inbox </span>
-                                    </a>
-                                    <a href="./page-login.html" class="dropdown-item">
-                                        <i class="icon-key"></i>
-                                        <span class="ml-2">Logout </span>
-                                    </a>
-                                </div>
-                            </li>
-                        </ul>
-                    </div>
-                </nav>
-            </div>
-        </div>
-        <!--**********************************
-            Header end ti-comment-alt
-        ***********************************-->
 
-        <!--**********************************
-            Sidebar start
-        ***********************************-->
-        <div class="quixnav">
-            <div class="quixnav-scroll">
-                <ul class="metismenu" id="menu">
-                    <li class="nav-label first">Main Menu</li>
-                    <!-- <li><a href="index.html"><i class="icon icon-single-04"></i><span class="nav-text">Dashboard</span></a>
-                    </li> -->
-                    <li><a class="has-arrow" href="javascript:void()" aria-expanded="false"><i
-                                class="icon icon-single-04"></i><span class="nav-text">관리자 메인 페이지</span></a>
-                        <ul aria-expanded="false">
-                            <li><a href="./index.html">Dashboard 1</a></li>
-                            <li><a href="./index2.html">Dashboard 2</a></li>
-                        </ul>
-                    </li>
-
-                    <li class="nav-label">회원관리</li>
-                    <li><a class="has-arrow" href="javascript:void()" aria-expanded="false"><i
-                                class="icon icon-app-store"></i><span class="nav-text">회원관리</span></a>
-                        <ul aria-expanded="false">
-                            <li><a href="AdminMember.ad">회원목록</a></li>
-                            <li><a class="has-arrow" href="javascript:void()" aria-expanded="false">회원차트</a>
-                                <ul aria-expanded="false">
-                                    <li><a href="./email-compose.html">Compose</a></li>
-                                    <li><a href="./email-inbox.html">Inbox</a></li>
-                                    <li><a href="./email-read.html">Read</a></li>
-                                </ul>
-                            </li>
-                            <li><a href="./app-calender.html">뭐하지</a></li>
-                        </ul>
-                    </li>
-					<!-- 차트 목록 있던 자리 -->
-                    <li class="nav-label">신고관리</li>
-                    <li><a class="has-arrow" href="javascript:void()" aria-expanded="false"><i
-                                class="icon icon-world-2"></i><span class="nav-text">전체 신고 목록</span></a>
-                        <ul aria-expanded="false">
-                            <li><a href="./ui-accordion.html">신고뭐하지</a></li>
-                        </ul>
-                    </li>
-
-                    <li><a class="has-arrow" href="javascript:void()" aria-expanded="false"><i
-                                class="icon icon-plug"></i><span class="nav-text">신고 처리 결과</span></a>
-                        <ul aria-expanded="false">
-                            <li><a href="./uc-select2.html">신고뭐하지</a></li>
-                        </ul>
-                    </li>
-
-                    <li class="nav-label">스토어</li>
-                    <li><a class="has-arrow" href="javascript:void()" aria-expanded="false"><i
-                                class="icon icon-form"></i><span class="nav-text">상품등록</span></a>
-                        <ul aria-expanded="false">
-                            <li><a href="./form-element.html">상품뭐하지</a></li>
-                        </ul>
-                    </li>
-                    <li><a class="has-arrow" href="javascript:void()" aria-expanded="false"><i
-                                class="icon icon-form"></i><span class="nav-text">상품삭제</span></a>
-                        <ul aria-expanded="false">
-                            <li><a href="./form-element.html">상품뭐하지</a></li>
-                        </ul>
-                    </li>
-                    <li class="nav-label">게시판</li>
-                    <li><a class="has-arrow" href="javascript:void()" aria-expanded="false"><i
-                                class="icon icon-layout-25"></i><span class="nav-text">게시판관리</span></a>
-                        <ul aria-expanded="false">
-                            <li><a href="table-bootstrap-basic.html">게시판뭐하지</a></li>
-                            <li><a href="table-datatable-basic.html">게시판뭐하지</a></li>
-                        </ul>
-                    </li>
-
-                    <li class="nav-label">고객센터</li>
-                    <li><a class="has-arrow" href="javascript:void()" aria-expanded="false"><i
-                                class="icon icon-single-copy-06"></i><span class="nav-text">자주묻는질문</span></a>
-                        <ul aria-expanded="false">
-                            <li><a href="./page-register.html">질문뭐하지</a></li>
-                        </ul>
-                    </li>
-                    <li class="nav-label">페이관리</li>
-                    <li><a class="has-arrow" href="javascript:void()" aria-expanded="false"><i
-                                class="icon icon-single-copy-06"></i><span class="nav-text">계좌</span></a>
-                        <ul aria-expanded="false">
-                            <li><a href="./page-register.html">질문뭐하지</a></li>
-                        </ul>
-                    </li>
-                    <li><a class="has-arrow" href="javascript:void()" aria-expanded="false"><i
-                                class="icon icon-single-copy-06"></i><span class="nav-text">입출금내역</span></a>
-                        <ul aria-expanded="false">
-                            <li><a href="./page-register.html">질문뭐하지</a></li>
-                        </ul>
-                    </li>
-                    <li class="nav-label">경매관리</li>
-                    <li><a class="has-arrow" href="javascript:void()" aria-expanded="false"><i
-                                class="icon icon-single-copy-06"></i><span class="nav-text">경매상품목록</span></a>
-                        <ul aria-expanded="false">
-                            <li><a href="./page-register.html">질문뭐하지</a></li>
-                        </ul>
-                    </li>
-                    <li><a class="has-arrow" href="javascript:void()" aria-expanded="false"><i
-                                class="icon icon-single-copy-06"></i><span class="nav-text">경매현황</span></a>
-                        <ul aria-expanded="false">
-                            <li><a href="./page-register.html">질문뭐하지</a></li>
-                        </ul>
-                    </li>
-                </ul>
-            </div>
-        </div>
-        <!--**********************************
-            Sidebar end
-        ***********************************-->
+		<!-- 사이드바 시작 -->
+		<header>
+			<jsp:include page="../inc/admin_sidebar.jsp"></jsp:include>
+		</header>
+		<!-- 사이드바 끝 -->
 
         <!--**********************************
             Content body start
@@ -756,21 +587,13 @@
         ***********************************-->
 
 
-        <!--**********************************
-            Footer start
-        ***********************************-->
+		<!-- footer 시작 -->
+		<footer>
+			<jsp:include page="../inc/admin_footer.jsp"></jsp:include>
+		</footer>
+		<!-- footer 끝 -->
 
-        <!--**********************************
-            Footer end
-        ***********************************-->
 
-        <!--**********************************
-           Support ticket button start
-        ***********************************-->
-
-        <!--**********************************
-           Support ticket button end
-        ***********************************-->
 
 
     </div>

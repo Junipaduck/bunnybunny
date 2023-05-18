@@ -129,10 +129,13 @@
                                 &nbsp;
                                 <select name="interest">
                                 	<option>관심카테고리 선택</option>
-                                	<option value="saving">패션의류</option>
-                                	<option value="stock">뷰티잡화</option>
-                                	<option value="card">가구생활</option>
-                                	<option value="card">추후수정할예정</option>
+                                	<option value="saving">의류/잡화</option>
+                                	<option value="stock">디지털/가전</option>
+                                	<option value="card">도서/티켓/문구</option>
+                                	<option value="card">뷰티/미용</option>
+                                	<option value="card">식품</option>
+                                	<option value="card">반려동물용품</option>
+                                	<option value="card">기타</option>
                                 </select>
                             </div>
                         </div>

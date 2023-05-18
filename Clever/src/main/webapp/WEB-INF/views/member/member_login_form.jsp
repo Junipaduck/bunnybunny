@@ -27,7 +27,7 @@ function doKakaoLogin() {
         <h2 class="page-title">로그인</h2>
         <div class="small-layout-inner">
             <p class="page-subTitle">안녕하세요, 2팀 입니다</p>
-            <form id="loginForm" name="loginForm" action="https://nsso.happypointcard.com/LoginServlet">
+            <form id="loginForm" name="loginForm" action="loginPro.me" method="post">
                 <input type="hidden" id="method" name="method" value="idpwProcessEx"/>
                 <input type="hidden" name="ssid" value="91"/>
                 <fieldset class="fieldset row">
@@ -35,7 +35,7 @@ function doKakaoLogin() {
                     <div class="field">
                         <div class="insert">
                             <div class="input-cover" style="overflow: visible;">
-                                <input type="text" placeholder="아이디" title="아이디 입력" id="id" name="id" value="">
+                                <input type="text" placeholder="아이디" title="아이디 입력" id="member_id" name="member_id" value="">
                                 <div class="input-element">
                                     <button type="button" class="btn-value-delete" tabindex="-1">입력값 삭제</button>
                                 </div>
@@ -45,8 +45,7 @@ function doKakaoLogin() {
                     <div class="field">
                         <div class="insert">
                             <div class="input-cover" style="overflow: visible;">
-                                <!-- 입력값 삭제 버튼 없을경우 no-delete추가 -->
-                                <input type="password" placeholder="비밀번호(숫자, 영문, 특수문자 조합 8~16자리)" title="비밀번호 입력" id="pw" name="pw" maxlength="16">
+                                <input type="password" placeholder="비밀번호(숫자, 영문, 특수문자 조합 8~16자리)" title="비밀번호 입력" id="member_passwd" name="member_passwd" maxlength="16">
                                 <div class="input-element">
                                     <button type="button" class="btn-value-delete" tabindex="-1">입력값 삭제</button>
                                 </div>

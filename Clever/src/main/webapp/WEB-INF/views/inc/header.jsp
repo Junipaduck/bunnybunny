@@ -1,5 +1,7 @@
 <%@ page language="java" contentType="text/html; charset=UTF-8"
     pageEncoding="UTF-8"%>
+<%@ taglib prefix="c" uri="http://java.sun.com/jsp/jstl/core" %> 
+
 <!DOCTYPE html>
 <html lang="ko">
 
@@ -13,7 +15,7 @@
     <meta name="format-detection" content="telephone=no">
     <link rel="icon" type="image/png"  href="${pageContext.request.contextPath }/resources/front.happypointcard.com/upfiles/appMain/resources/ha-web/images/shared/favicon.png"/>
 
-    <title>자산관리 2팀</title>
+    <title>중고거래 2팀</title>
 
     <link rel="stylesheet" href="${pageContext.request.contextPath }/resources/www.happypointcard.com/assets/pc/css/common9846.css?v=2023051200">
 <%-- <link rel="stylesheet" href="${pageContext.request.contextPath }/resources/www.happypointcard.com/assets/pc/css/vendors/uniform.custom.css" /> --%>
@@ -40,6 +42,12 @@
             });
         }
     })();
+    
+    /* 로그아웃 */
+    function confirmLogout(){
+		let result = confirm("로그아웃 하시겠습니까?");	
+		return result;
+	}
 
     </script>
 </head>
@@ -62,9 +70,24 @@
 	        </div>
 	        <div class="header-aside">
 	            <ul class="header-aside-menu">
-	                <li><a href="login.me">로그인</a></li>
-	                    <li><a href="joinForm.me">회원가입</a></li>
-	                <li><a href="myPage.me">마이페이지</a></li> <!-- 로그인 하면 로그인&회원가입 없애고, 마이페이지가 나오도록 하기 -->
+	            <c:choose>
+						<c:when test="${empty sessionScope.sId }">
+			                <li><a href="login.me">로그인</a></li>
+			                <li><a href="joinForm.me">회원가입</a></li>
+						</c:when>
+						<c:otherwise>
+							<li><a href="./">${sessionScope.sId } 님</a></li>
+							<li><a href="logout.me" id="logout" onclick="return confirmLogout()">로그아웃</a></li>
+								<c:choose>
+									<c:when test="${sessionScope.sId eq 'admin' }">
+					                	<li><a href="AdminMain.ad">관리자페이지</a></li> 
+									</c:when>
+									<c:otherwise>
+					                	<li><a href="myPage.me">마이페이지</a></li> 
+									</c:otherwise>
+								</c:choose>
+						</c:otherwise>
+				</c:choose>
 	                <li class="csmenu">
 	                    <a href="매핑주소를입력하시오">고객센터</a>
 	                    <ul class="menu-open">
@@ -84,16 +107,16 @@
 	                        <a href="매핑주소를입력하시오" onclick="headerPage.showSubGnb(this);">소개</a>
 	                    </li>
 	                    <li class="gnb-menu">
-	                        <a href="event.eo" onclick="headerPage.showSubGnb(this);">이벤트/쿠폰</a>
+	                        <a href="event.eo" onclick="headerPage.showSubGnb(this);">거래하기</a>
 	                    </li>
 	                    <li class="gnb-menu">
-	                        <a href="store.so" onclick="headerPage.showSubGnb(this);">스토어</a>
+	                        <a href="auction.ao" onclick="headerPage.showSubGnb(this);">경매하기</a>
 	                    </li>
 	                    <li class="gnb-menu">
 	                        <a href="community.co" onclick="headerPage.showSubGnb(this);">커뮤니티</a>
 	                    </li>
-	                     <li class="gnb-menu">
-	                        <a href="auction.ao" onclick="headerPage.showSubGnb(this);">경매하기</a>
+	                    <li class="gnb-menu">
+	                        <a href="store.so" onclick="headerPage.showSubGnb(this);">스토어</a>
 	                    </li>
 <!-- 	                    <li class="gnb-menu"> -->
 <!-- 	                        <a href="javascript:void(0);" onclick="headerPage.showSubGnb(this);">마이페이지</a> -->

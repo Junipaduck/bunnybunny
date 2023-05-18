@@ -12,55 +12,55 @@ pageEncoding="UTF-8"%>
 	
 	
 <style>
-    .circleThumb {width:100%; margin-top:120px; font-family: 'Pretendard-Regular';}
-    .circleThumb ul {width:1600px; margin:0 auto; display:flex; justify-content: space-between;}
-    .circleThumb ul li {width:150px; height:150px; display:inline-block; transition:.3s;}
+    .circleThumb {width:100%; font-family: 'Pretendard-Regular';}
+    .circleThumb ul {width:1200px; margin:0 auto; display:flex; justify-content: space-between;}
+    .circleThumb ul li {width:100px; height:100px; display:inline-block; transition:.3s;}
     .circleThumb ul li:hover {margin-top:-10px;}
-    /*.circleThumb ul li:nth-last-child(1):hover {margin-top:0;} */
-    .circleThumb ul li p {text-align:center; margin-top:10px; font-size:16px;}
+    .circleThumb ul li p {text-align:center; margin-top:10px; font-size:16px; margin-right: 50px;}
+    .circleThumb img {width:50px; height: 50px;}
 </style>
 <div class="circleThumb">
     <ul>
-        <li>
-            <a href="https://www.mulawear.com/shop/shopbrand.html?xcode=024&mcode=001&type=Y">
-                <img src="//mulawear.jpg3.kr/main/NEW/img/circle/1th_mlwr_2.png">
-                <p>MLWR</p>
+   		<li>
+            <a href="매핑주소를입력하시오">
+               <img src="${pageContext.request.contextPath }/resources/images/free-icon-clothes-6043858.png">
+               <p>의류/잡화</p>
             </a>
         </li>
         <li>
-            <a href="https://www.mulawear.com/shop/shopbrand.html?xcode=004&mcode=001&type=Y">
-                <img src="//mulawear.jpg3.kr/main/NEW/img/circle/2th_pilates.png">
-                <p>요가&필라테스</p>
+            <a href="매핑주소를입력하시오">
+                <img src="${pageContext.request.contextPath }/resources/images/free-icon-desktop-computer-1792525.png">
+                <p>디지털/가전</p>
             </a>
         </li>
         <li>
-            <a href="https://www.mulawear.com/shop/shopbrand.html?xcode=053&mcode=004&type=Y">
-                <img src="//mulawear.jpg3.kr/main/NEW/img/circle/3th_1&1_2.png">
-                <p>NEW 1&1</p>
+            <a href="매핑주소를입력하시오">
+                <img src="${pageContext.request.contextPath }/resources/images/free-icon-book-3145765.png">
+                <p>도서/티켓/문구</p>
             </a>
         </li>
         <li>
-            <a href="https://www.mulawear.com/shop/shopbrand.html?xcode=052&type=Y">
-                <img src="//mulawear.jpg3.kr/main/NEW/img/circle/4th_coverup.png">
-                <p>커버업</p>
+            <a href="매핑주소를입력하시오">
+                <img src="${pageContext.request.contextPath }/resources/images/free-icon-cosmetics-3163203.png">
+                <p>뷰티/미용</p>
             </a>
         </li>
         <li>
-            <a href="https://www.mulawear.com/shop/shopbrand.html?xcode=048&mcode=001&type=Y">
-                <img src="//mulawear.jpg3.kr/main/NEW/img/circle/5th_pad2.png">
-                <p>인패드</p>
+            <a href="매핑주소를입력하시오">
+                <img src="${pageContext.request.contextPath }/resources/images/free-icon-organic-food-2713569.png">
+                <p>식품</p>
             </a>
         </li>
         <li>
-            <a href="/shop/shopbrand.html?xcode=036&type=Y">
-                <img src="//mulawear.jpg3.kr/main/NEW/img/circle/6th_gym.png">
-                <p>짐웨어</p>
+            <a href="매핑주소를입력하시오">
+                <img src="${pageContext.request.contextPath }/resources/images/free-icon-pets-3460335.png">
+                <p>반려동물용품</p>
             </a>
         </li>
         <li>
-            <a href="https://www.mulawear.com/shop/shopbrand.html?xcode=027&mcode=001&type=Y">
-                <img src="//mulawear.jpg3.kr/main/NEW/img/circle/7th_set_2.png">
-                <p>세트</p>
+            <a href="매핑주소를입력하시오">
+                <img src="${pageContext.request.contextPath }/resources/images/free-icon-shopping-5508988.png">
+                <p>기타</p>
             </a>
         </li>
     </ul>

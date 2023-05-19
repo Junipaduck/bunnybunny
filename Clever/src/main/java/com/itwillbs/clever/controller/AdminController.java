@@ -7,17 +7,34 @@ import org.springframework.web.bind.annotation.*;
 public class AdminController {
 	
 	
-	@GetMapping(value = "/AdminMain.ad")
+	@GetMapping(value = "/adminMain.ad")
 	public String adminMain() {
 		return "admin/admin_main";
 	}
 	
-	// 관리자 페이지 회원 목록 임시 매핑
-	@GetMapping(value = "/AdminMember.ad")
-	public String adminMember() {
-		return "admin/admin_member";
+	// 상품 등록 페이지 
+	@GetMapping(value = "/storeRegister.ad")
+	public String storeRegister() {
+		return "admin/store_register_form";
 	}
 	
+	// 상품 등록 페이지 
+	@GetMapping(value = "/storeModify.ad")
+	public String storeModify() {
+		return "admin/store_modify_form";
+	}
+	
+	// 현재 판매 중인 상품 목록 조회
+	@GetMapping(value = "/storeList.ad")
+	public String storeList() {
+		return "admin/store_list";
+	}
+	
+	// 경매 목록 조회
+	@GetMapping(value = "/adminAuction.ad")
+	public String autionList() {
+		return "admin/aution_list";
+	}
 }
 
 

@@ -16,7 +16,7 @@
                     <div class="collapse navbar-collapse justify-content-between">
                         <div class="header-left">
 						<!-- 검색 창 있던 자리 -->
-	                        <a href="AdminMain.ad" class="dropdown-item">
+	                        <a href="adminMain.ad" class="dropdown-item">
 	                            <i class="icon-user"></i>
 	                            <span class="ml-2">홈</span>
 	                        </a>

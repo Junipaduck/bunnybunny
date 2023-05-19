@@ -80,7 +80,7 @@
 							<li><a href="logout.me" id="logout" onclick="return confirmLogout()">로그아웃</a></li>
 								<c:choose>
 									<c:when test="${sessionScope.sId eq 'admin' }">
-					                	<li><a href="AdminMain.ad">관리자페이지</a></li> 
+					                	<li><a href="adminMain.ad">관리자페이지</a></li> 
 									</c:when>
 									<c:otherwise>
 					                	<li><a href="myPage.me">마이페이지</a></li> 

@@ -41,7 +41,7 @@
                     <li><a class="has-arrow" href="javascript:void()" aria-expanded="false"><i
                                 class="icon icon-world-2"></i><span class="nav-text">전체 신고 목록</span></a>
                         <ul aria-expanded="false">
-                            <li><a href="./ui-accordion.html">신고뭐하지</a></li>
+                            <li><a href="">신고뭐하지</a></li>
                         </ul>
                     </li>
 
@@ -54,9 +54,17 @@
 
                     <li class="nav-label">스토어</li>
                     <li><a class="has-arrow" href="javascript:void()" aria-expanded="false"><i
+                                class="icon icon-form"></i><span class="nav-text">상품목록</span></a>
+                        <ul aria-expanded="false">
+                            <li><a href="storeList.ad">판매중인 상품</a></li>
+                            <li><a href="storeModify.ad">품절된 상품</a></li>
+                        </ul>
+                    </li>
+                    <li><a class="has-arrow" href="javascript:void()" aria-expanded="false"><i
                                 class="icon icon-form"></i><span class="nav-text">상품등록</span></a>
                         <ul aria-expanded="false">
-                            <li><a href="./form-element.html">상품뭐하지</a></li>
+                            <li><a href="storeRegister.ad">상품등록</a></li>
+                            <li><a href="storeModify.ad">상품수정</a></li>
                         </ul>
                     </li>
                     <li><a class="has-arrow" href="javascript:void()" aria-expanded="false"><i
@@ -98,7 +106,7 @@
                     <li><a class="has-arrow" href="javascript:void()" aria-expanded="false"><i
                                 class="icon icon-single-copy-06"></i><span class="nav-text">경매상품목록</span></a>
                         <ul aria-expanded="false">
-                            <li><a href="./page-register.html">질문뭐하지</a></li>
+                            <li><a href="adminAuction.ad">경매 목록 조회</a></li>
                         </ul>
                     </li>
                     <li><a class="has-arrow" href="javascript:void()" aria-expanded="false"><i
